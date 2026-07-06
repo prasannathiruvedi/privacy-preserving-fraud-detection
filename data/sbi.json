@@ -1,0 +1,902 @@
+{
+  "TX001": {
+    "amount": 47025,
+    "sender_account_age_days": 995,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 7723,
+    "sender_state": "Madhya Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX002": {
+    "amount": 6178,
+    "sender_account_age_days": 599,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 3669,
+    "sender_state": "Rajasthan",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX003": {
+    "amount": 19313,
+    "sender_account_age_days": 2442,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 19418,
+    "sender_state": "Maharashtra",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX004": {
+    "amount": 73909,
+    "sender_account_age_days": 20,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 3532,
+    "sender_state": "Gujarat",
+    "is_new_device": true,
+    "failed_attempts_24h": 8
+  },
+  "TX005": {
+    "amount": 91943,
+    "sender_account_age_days": 29,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 6108,
+    "sender_state": "Delhi",
+    "is_new_device": true,
+    "failed_attempts_24h": 3
+  },
+  "TX006": {
+    "amount": 43054,
+    "sender_account_age_days": 1051,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 13464,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX007": {
+    "amount": 38342,
+    "sender_account_age_days": 1935,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 12361,
+    "sender_state": "Kerala",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX008": {
+    "amount": 27766,
+    "sender_account_age_days": 2968,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 13108,
+    "sender_state": "Kerala",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX009": {
+    "amount": 42106,
+    "sender_account_age_days": 1273,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 4155,
+    "sender_state": "Uttar Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX010": {
+    "amount": 19658,
+    "sender_account_age_days": 2742,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 5508,
+    "sender_state": "Kerala",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX011": {
+    "amount": 15792,
+    "sender_account_age_days": 1440,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 8392,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX012": {
+    "amount": 60821,
+    "sender_account_age_days": 2451,
+    "sender_txn_count_7d": 9,
+    "sender_avg_amount_30d": 10645,
+    "sender_state": "Delhi",
+    "is_new_device": false,
+    "failed_attempts_24h": 6
+  },
+  "TX013": {
+    "amount": 29688,
+    "sender_account_age_days": 2300,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 8623,
+    "sender_state": "Maharashtra",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX014": {
+    "amount": 52058,
+    "sender_account_age_days": 28,
+    "sender_txn_count_7d": 10,
+    "sender_avg_amount_30d": 1080,
+    "sender_state": "Punjab",
+    "is_new_device": true,
+    "failed_attempts_24h": 5
+  },
+  "TX015": {
+    "amount": 93187,
+    "sender_account_age_days": 3,
+    "sender_txn_count_7d": 11,
+    "sender_avg_amount_30d": 3402,
+    "sender_state": "Andhra Pradesh",
+    "is_new_device": true,
+    "failed_attempts_24h": 6
+  },
+  "TX016": {
+    "amount": 12656,
+    "sender_account_age_days": 1199,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 18073,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX017": {
+    "amount": 3415,
+    "sender_account_age_days": 582,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 3556,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX018": {
+    "amount": 67380,
+    "sender_account_age_days": 12,
+    "sender_txn_count_7d": 12,
+    "sender_avg_amount_30d": 2836,
+    "sender_state": "Madhya Pradesh",
+    "is_new_device": true,
+    "failed_attempts_24h": 8
+  },
+  "TX019": {
+    "amount": 3846,
+    "sender_account_age_days": 1465,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 19642,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX020": {
+    "amount": 7956,
+    "sender_account_age_days": 1834,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 19470,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX021": {
+    "amount": 17507,
+    "sender_account_age_days": 1158,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 4788,
+    "sender_state": "Uttar Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX022": {
+    "amount": 33253,
+    "sender_account_age_days": 1054,
+    "sender_txn_count_7d": 5,
+    "sender_avg_amount_30d": 4840,
+    "sender_state": "Bihar",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX023": {
+    "amount": 34764,
+    "sender_account_age_days": 2859,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 18673,
+    "sender_state": "Bihar",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX024": {
+    "amount": 13903,
+    "sender_account_age_days": 2658,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 7171,
+    "sender_state": "Kerala",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX025": {
+    "amount": 2989,
+    "sender_account_age_days": 1314,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 11429,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX026": {
+    "amount": 2461,
+    "sender_account_age_days": 2415,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 19587,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX027": {
+    "amount": 16453,
+    "sender_account_age_days": 2974,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 12089,
+    "sender_state": "Rajasthan",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX028": {
+    "amount": 71770,
+    "sender_account_age_days": 29,
+    "sender_txn_count_7d": 11,
+    "sender_avg_amount_30d": 7071,
+    "sender_state": "Madhya Pradesh",
+    "is_new_device": true,
+    "failed_attempts_24h": 8
+  },
+  "TX029": {
+    "amount": 64915,
+    "sender_account_age_days": 26,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 693,
+    "sender_state": "Telangana",
+    "is_new_device": true,
+    "failed_attempts_24h": 6
+  },
+  "TX030": {
+    "amount": 61702,
+    "sender_account_age_days": 8,
+    "sender_txn_count_7d": 9,
+    "sender_avg_amount_30d": 813,
+    "sender_state": "Telangana",
+    "is_new_device": true,
+    "failed_attempts_24h": 6
+  },
+  "TX031": {
+    "amount": 210,
+    "sender_account_age_days": 1967,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 12434,
+    "sender_state": "Rajasthan",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX032": {
+    "amount": 69376,
+    "sender_account_age_days": 22,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 2071,
+    "sender_state": "Punjab",
+    "is_new_device": true,
+    "failed_attempts_24h": 6
+  },
+  "TX033": {
+    "amount": 38109,
+    "sender_account_age_days": 1941,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 15736,
+    "sender_state": "Kerala",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX034": {
+    "amount": 6220,
+    "sender_account_age_days": 1553,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 10671,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX035": {
+    "amount": 27260,
+    "sender_account_age_days": 2046,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 13082,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX036": {
+    "amount": 83944,
+    "sender_account_age_days": 22,
+    "sender_txn_count_7d": 12,
+    "sender_avg_amount_30d": 911,
+    "sender_state": "Uttar Pradesh",
+    "is_new_device": true,
+    "failed_attempts_24h": 3
+  },
+  "TX037": {
+    "amount": 28066,
+    "sender_account_age_days": 2248,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 5715,
+    "sender_state": "Uttar Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX038": {
+    "amount": 28927,
+    "sender_account_age_days": 1305,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 9862,
+    "sender_state": "Telangana",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX039": {
+    "amount": 27288,
+    "sender_account_age_days": 444,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 11342,
+    "sender_state": "Maharashtra",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX040": {
+    "amount": 25028,
+    "sender_account_age_days": 2539,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 693,
+    "sender_state": "Madhya Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX041": {
+    "amount": 14480,
+    "sender_account_age_days": 2180,
+    "sender_txn_count_7d": 5,
+    "sender_avg_amount_30d": 14781,
+    "sender_state": "Telangana",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX042": {
+    "amount": 1867,
+    "sender_account_age_days": 2368,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 19895,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX043": {
+    "amount": 13971,
+    "sender_account_age_days": 1521,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 11210,
+    "sender_state": "Gujarat",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX044": {
+    "amount": 14794,
+    "sender_account_age_days": 1614,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 1819,
+    "sender_state": "Delhi",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX045": {
+    "amount": 45940,
+    "sender_account_age_days": 2085,
+    "sender_txn_count_7d": 5,
+    "sender_avg_amount_30d": 12587,
+    "sender_state": "Haryana",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX046": {
+    "amount": 37835,
+    "sender_account_age_days": 1458,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 13497,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX047": {
+    "amount": 37188,
+    "sender_account_age_days": 676,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 11877,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX048": {
+    "amount": 30229,
+    "sender_account_age_days": 2784,
+    "sender_txn_count_7d": 3,
+    "sender_avg_amount_30d": 14770,
+    "sender_state": "Punjab",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX049": {
+    "amount": 21222,
+    "sender_account_age_days": 1280,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 3339,
+    "sender_state": "Delhi",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX050": {
+    "amount": 17031,
+    "sender_account_age_days": 1634,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 9663,
+    "sender_state": "Kerala",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX051": {
+    "amount": 15849,
+    "sender_account_age_days": 2455,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 16583,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX052": {
+    "amount": 36372,
+    "sender_account_age_days": 2119,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 14442,
+    "sender_state": "Telangana",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX053": {
+    "amount": 7935,
+    "sender_account_age_days": 1473,
+    "sender_txn_count_7d": 3,
+    "sender_avg_amount_30d": 6776,
+    "sender_state": "Gujarat",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX054": {
+    "amount": 19909,
+    "sender_account_age_days": 915,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 18002,
+    "sender_state": "Maharashtra",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX055": {
+    "amount": 81373,
+    "sender_account_age_days": 2122,
+    "sender_txn_count_7d": 12,
+    "sender_avg_amount_30d": 7582,
+    "sender_state": "Gujarat",
+    "is_new_device": true,
+    "failed_attempts_24h": 3
+  },
+  "TX056": {
+    "amount": 36986,
+    "sender_account_age_days": 792,
+    "sender_txn_count_7d": 5,
+    "sender_avg_amount_30d": 3291,
+    "sender_state": "Kerala",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX057": {
+    "amount": 28203,
+    "sender_account_age_days": 2591,
+    "sender_txn_count_7d": 5,
+    "sender_avg_amount_30d": 19132,
+    "sender_state": "Haryana",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX058": {
+    "amount": 5019,
+    "sender_account_age_days": 2441,
+    "sender_txn_count_7d": 3,
+    "sender_avg_amount_30d": 587,
+    "sender_state": "Uttar Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX059": {
+    "amount": 45148,
+    "sender_account_age_days": 472,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 9168,
+    "sender_state": "Punjab",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX060": {
+    "amount": 4008,
+    "sender_account_age_days": 473,
+    "sender_txn_count_7d": 3,
+    "sender_avg_amount_30d": 10579,
+    "sender_state": "Bihar",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX061": {
+    "amount": 35488,
+    "sender_account_age_days": 2230,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 14844,
+    "sender_state": "Bihar",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX062": {
+    "amount": 1459,
+    "sender_account_age_days": 2585,
+    "sender_txn_count_7d": 5,
+    "sender_avg_amount_30d": 19382,
+    "sender_state": "Uttar Pradesh",
+    "is_new_device": true,
+    "failed_attempts_24h": 0
+  },
+  "TX063": {
+    "amount": 30902,
+    "sender_account_age_days": 554,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 13880,
+    "sender_state": "Andhra Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX064": {
+    "amount": 2504,
+    "sender_account_age_days": 2434,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 3385,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX065": {
+    "amount": 90804,
+    "sender_account_age_days": 11,
+    "sender_txn_count_7d": 12,
+    "sender_avg_amount_30d": 5623,
+    "sender_state": "Delhi",
+    "is_new_device": true,
+    "failed_attempts_24h": 3
+  },
+  "TX066": {
+    "amount": 20465,
+    "sender_account_age_days": 829,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 18596,
+    "sender_state": "Andhra Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX067": {
+    "amount": 46329,
+    "sender_account_age_days": 2265,
+    "sender_txn_count_7d": 5,
+    "sender_avg_amount_30d": 14114,
+    "sender_state": "Delhi",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX068": {
+    "amount": 18204,
+    "sender_account_age_days": 466,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 11637,
+    "sender_state": "Gujarat",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX069": {
+    "amount": 29364,
+    "sender_account_age_days": 789,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 11809,
+    "sender_state": "West Bengal",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX070": {
+    "amount": 52860,
+    "sender_account_age_days": 1882,
+    "sender_txn_count_7d": 10,
+    "sender_avg_amount_30d": 14201,
+    "sender_state": "West Bengal",
+    "is_new_device": true,
+    "failed_attempts_24h": 6
+  },
+  "TX071": {
+    "amount": 6634,
+    "sender_account_age_days": 1984,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 1002,
+    "sender_state": "Andhra Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX072": {
+    "amount": 94194,
+    "sender_account_age_days": 1545,
+    "sender_txn_count_7d": 11,
+    "sender_avg_amount_30d": 7188,
+    "sender_state": "Andhra Pradesh",
+    "is_new_device": true,
+    "failed_attempts_24h": 6
+  },
+  "TX073": {
+    "amount": 41633,
+    "sender_account_age_days": 584,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 15038,
+    "sender_state": "Bihar",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX074": {
+    "amount": 16103,
+    "sender_account_age_days": 777,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 19044,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX075": {
+    "amount": 9479,
+    "sender_account_age_days": 2569,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 15610,
+    "sender_state": "Gujarat",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX076": {
+    "amount": 88507,
+    "sender_account_age_days": 11,
+    "sender_txn_count_7d": 9,
+    "sender_avg_amount_30d": 5734,
+    "sender_state": "Gujarat",
+    "is_new_device": false,
+    "failed_attempts_24h": 8
+  },
+  "TX077": {
+    "amount": 1537,
+    "sender_account_age_days": 1390,
+    "sender_txn_count_7d": 7,
+    "sender_avg_amount_30d": 9494,
+    "sender_state": "Bihar",
+    "is_new_device": true,
+    "failed_attempts_24h": 0
+  },
+  "TX078": {
+    "amount": 64352,
+    "sender_account_age_days": 1643,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 12172,
+    "sender_state": "Madhya Pradesh",
+    "is_new_device": true,
+    "failed_attempts_24h": 8
+  },
+  "TX079": {
+    "amount": 6006,
+    "sender_account_age_days": 719,
+    "sender_txn_count_7d": 5,
+    "sender_avg_amount_30d": 11205,
+    "sender_state": "Delhi",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX080": {
+    "amount": 16940,
+    "sender_account_age_days": 854,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 10171,
+    "sender_state": "Madhya Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX081": {
+    "amount": 24071,
+    "sender_account_age_days": 2463,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 13429,
+    "sender_state": "Karnataka",
+    "is_new_device": true,
+    "failed_attempts_24h": 1
+  },
+  "TX082": {
+    "amount": 80898,
+    "sender_account_age_days": 7,
+    "sender_txn_count_7d": 0,
+    "sender_avg_amount_30d": 5575,
+    "sender_state": "Telangana",
+    "is_new_device": false,
+    "failed_attempts_24h": 7
+  },
+  "TX083": {
+    "amount": 9260,
+    "sender_account_age_days": 658,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 1719,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX084": {
+    "amount": 38591,
+    "sender_account_age_days": 1897,
+    "sender_txn_count_7d": 3,
+    "sender_avg_amount_30d": 14094,
+    "sender_state": "Rajasthan",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX085": {
+    "amount": 6611,
+    "sender_account_age_days": 1666,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 18341,
+    "sender_state": "Maharashtra",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX086": {
+    "amount": 42009,
+    "sender_account_age_days": 2809,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 2157,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX087": {
+    "amount": 71532,
+    "sender_account_age_days": 1154,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 14921,
+    "sender_state": "Gujarat",
+    "is_new_device": false,
+    "failed_attempts_24h": 3
+  },
+  "TX088": {
+    "amount": 15693,
+    "sender_account_age_days": 1648,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 1017,
+    "sender_state": "Tamil Nadu",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX089": {
+    "amount": 39006,
+    "sender_account_age_days": 2283,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 15311,
+    "sender_state": "Maharashtra",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX090": {
+    "amount": 28036,
+    "sender_account_age_days": 1826,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 16565,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX091": {
+    "amount": 46771,
+    "sender_account_age_days": 2427,
+    "sender_txn_count_7d": 6,
+    "sender_avg_amount_30d": 12981,
+    "sender_state": "Gujarat",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX092": {
+    "amount": 28285,
+    "sender_account_age_days": 1061,
+    "sender_txn_count_7d": 8,
+    "sender_avg_amount_30d": 7987,
+    "sender_state": "West Bengal",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX093": {
+    "amount": 31181,
+    "sender_account_age_days": 2994,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 3489,
+    "sender_state": "West Bengal",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX094": {
+    "amount": 21703,
+    "sender_account_age_days": 2481,
+    "sender_txn_count_7d": 2,
+    "sender_avg_amount_30d": 13961,
+    "sender_state": "Andhra Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX095": {
+    "amount": 93039,
+    "sender_account_age_days": 833,
+    "sender_txn_count_7d": 12,
+    "sender_avg_amount_30d": 5674,
+    "sender_state": "Andhra Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 5
+  },
+  "TX096": {
+    "amount": 44335,
+    "sender_account_age_days": 2694,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 9263,
+    "sender_state": "Haryana",
+    "is_new_device": true,
+    "failed_attempts_24h": 0
+  },
+  "TX097": {
+    "amount": 9397,
+    "sender_account_age_days": 466,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 3506,
+    "sender_state": "West Bengal",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX098": {
+    "amount": 5667,
+    "sender_account_age_days": 2623,
+    "sender_txn_count_7d": 1,
+    "sender_avg_amount_30d": 5598,
+    "sender_state": "Maharashtra",
+    "is_new_device": false,
+    "failed_attempts_24h": 1
+  },
+  "TX099": {
+    "amount": 18002,
+    "sender_account_age_days": 1877,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 17288,
+    "sender_state": "Karnataka",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  },
+  "TX100": {
+    "amount": 603,
+    "sender_account_age_days": 405,
+    "sender_txn_count_7d": 4,
+    "sender_avg_amount_30d": 10376,
+    "sender_state": "Madhya Pradesh",
+    "is_new_device": false,
+    "failed_attempts_24h": 0
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "TX001": {
+    "merchant_category": "Telecom Recharge",
+    "ip_country": "India"
+  },
+  "TX002": {
+    "merchant_category": "Utilities",
+    "ip_country": "Indonesia"
+  },
+  "TX003": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX004": {
+    "merchant_category": "P2P Loan Platform",
+    "ip_country": "Russia"
+  },
+  "TX005": {
+    "merchant_category": "Gift Card Reseller",
+    "ip_country": "India"
+  },
+  "TX006": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX007": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  },
+  "TX008": {
+    "merchant_category": "Subscription Services",
+    "ip_country": "India"
+  },
+  "TX009": {
+    "merchant_category": "Utilities",
+    "ip_country": "India"
+  },
+  "TX010": {
+    "merchant_category": "Telecom Recharge",
+    "ip_country": "India"
+  },
+  "TX011": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  },
+  "TX012": {
+    "merchant_category": "Anonymous Marketplace",
+    "ip_country": "Romania"
+  },
+  "TX013": {
+    "merchant_category": "Grocery",
+    "ip_country": "India"
+  },
+  "TX014": {
+    "merchant_category": "Healthcare",
+    "ip_country": "Russia"
+  },
+  "TX015": {
+    "merchant_category": "Utilities",
+    "ip_country": "Vietnam"
+  },
+  "TX016": {
+    "merchant_category": "Subscription Services",
+    "ip_country": "India"
+  },
+  "TX017": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  },
+  "TX018": {
+    "merchant_category": "Crypto Exchange",
+    "ip_country": "India"
+  },
+  "TX019": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX020": {
+    "merchant_category": "Telecom Recharge",
+    "ip_country": "India"
+  },
+  "TX021": {
+    "merchant_category": "Subscription Services",
+    "ip_country": "Nigeria"
+  },
+  "TX022": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX023": {
+    "merchant_category": "Fuel",
+    "ip_country": "India"
+  },
+  "TX024": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX025": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  },
+  "TX026": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX027": {
+    "merchant_category": "Grocery",
+    "ip_country": "India"
+  },
+  "TX028": {
+    "merchant_category": "Anonymous Marketplace",
+    "ip_country": "India"
+  },
+  "TX029": {
+    "merchant_category": "Crypto Exchange",
+    "ip_country": "Philippines"
+  },
+  "TX030": {
+    "merchant_category": "Crypto Exchange",
+    "ip_country": "Pakistan"
+  },
+  "TX031": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX032": {
+    "merchant_category": "Money Mule Network",
+    "ip_country": "India"
+  },
+  "TX033": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX034": {
+    "merchant_category": "Utilities",
+    "ip_country": "India"
+  },
+  "TX035": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX036": {
+    "merchant_category": "Public Transport",
+    "ip_country": "Philippines"
+  },
+  "TX037": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX038": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX039": {
+    "merchant_category": "Grocery",
+    "ip_country": "India"
+  },
+  "TX040": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX041": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX042": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX043": {
+    "merchant_category": "Grocery",
+    "ip_country": "India"
+  },
+  "TX044": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX045": {
+    "merchant_category": "Grocery",
+    "ip_country": "India"
+  },
+  "TX046": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX047": {
+    "merchant_category": "Telecom Recharge",
+    "ip_country": "India"
+  },
+  "TX048": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX049": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX050": {
+    "merchant_category": "Education",
+    "ip_country": "India"
+  },
+  "TX051": {
+    "merchant_category": "Telecom Recharge",
+    "ip_country": "India"
+  },
+  "TX052": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX053": {
+    "merchant_category": "Telecom Recharge",
+    "ip_country": "India"
+  },
+  "TX054": {
+    "merchant_category": "Grocery",
+    "ip_country": "India"
+  },
+  "TX055": {
+    "merchant_category": "Wire Transfer Service",
+    "ip_country": "Romania"
+  },
+  "TX056": {
+    "merchant_category": "Fuel",
+    "ip_country": "India"
+  },
+  "TX057": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  },
+  "TX058": {
+    "merchant_category": "Education",
+    "ip_country": "India"
+  },
+  "TX059": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  },
+  "TX060": {
+    "merchant_category": "Fuel",
+    "ip_country": "India"
+  },
+  "TX061": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX062": {
+    "merchant_category": "Education",
+    "ip_country": "India"
+  },
+  "TX063": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX064": {
+    "merchant_category": "Grocery",
+    "ip_country": "India"
+  },
+  "TX065": {
+    "merchant_category": "Money Mule Network",
+    "ip_country": "Romania"
+  },
+  "TX066": {
+    "merchant_category": "Fuel",
+    "ip_country": "India"
+  },
+  "TX067": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  },
+  "TX068": {
+    "merchant_category": "Education",
+    "ip_country": "India"
+  },
+  "TX069": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX070": {
+    "merchant_category": "Gambling",
+    "ip_country": "Pakistan"
+  },
+  "TX071": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX072": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX073": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX074": {
+    "merchant_category": "Education",
+    "ip_country": "India"
+  },
+  "TX075": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  },
+  "TX076": {
+    "merchant_category": "Unregistered Forex",
+    "ip_country": "Indonesia"
+  },
+  "TX077": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX078": {
+    "merchant_category": "Gift Card Reseller",
+    "ip_country": "Indonesia"
+  },
+  "TX079": {
+    "merchant_category": "Fuel",
+    "ip_country": "India"
+  },
+  "TX080": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX081": {
+    "merchant_category": "Telecom Recharge",
+    "ip_country": "India"
+  },
+  "TX082": {
+    "merchant_category": "P2P Loan Platform",
+    "ip_country": "India"
+  },
+  "TX083": {
+    "merchant_category": "Subscription Services",
+    "ip_country": "India"
+  },
+  "TX084": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX085": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX086": {
+    "merchant_category": "Food Delivery",
+    "ip_country": "India"
+  },
+  "TX087": {
+    "merchant_category": "Crypto Exchange",
+    "ip_country": "Philippines"
+  },
+  "TX088": {
+    "merchant_category": "Telecom Recharge",
+    "ip_country": "India"
+  },
+  "TX089": {
+    "merchant_category": "Education",
+    "ip_country": "India"
+  },
+  "TX090": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX091": {
+    "merchant_category": "Subscription Services",
+    "ip_country": "India"
+  },
+  "TX092": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  },
+  "TX093": {
+    "merchant_category": "Subscription Services",
+    "ip_country": "India"
+  },
+  "TX094": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX095": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX096": {
+    "merchant_category": "Healthcare",
+    "ip_country": "India"
+  },
+  "TX097": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX098": {
+    "merchant_category": "Education",
+    "ip_country": "India"
+  },
+  "TX099": {
+    "merchant_category": "Public Transport",
+    "ip_country": "India"
+  },
+  "TX100": {
+    "merchant_category": "E-commerce",
+    "ip_country": "India"
+  }
+}
