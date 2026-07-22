@@ -1,237 +1,142 @@
-# AI_MODEL — UPI Fraud Detection Service
+# UPI Fraud Detection Service
 
-Modular ML service using **Logistic Regression** + **MP-SPDZ MPC**.
-
----
+Modular, production-ready ML service using Logistic Regression.
 
 ## Project Structure
 
 ```
-AI_MODEL/
-├── config.py                        ← ALL config, rules, allowed values
+upi_fraud_service/
+├── config.py              ← All configuration, rules, allowed values
 ├── requirements.txt
-├── README.md
 │
 ├── data/
-│   ├── __init__.py
-│   └── generator.py                 ← Synthetic UPI data (training only)
+│   └── generator.py       ← Synthetic data (training only)
 │
 ├── features/
-│   ├── __init__.py
-│   └── engineer.py                  ← Feature engineering (model-agnostic)
+│   └── engineer.py        ← Feature engineering (model-agnostic)
 │
 ├── model/
-│   ├── __init__.py
-│   ├── train.py                     ← Train LR + save artifacts (run once)
-│   └── predictor.py                 ← Load artifacts + inference only
+│   ├── train.py           ← Run once to train + save artifacts
+│   └── predictor.py       ← Load artifacts + run inference
 │
 ├── api/
-│   ├── __init__.py
-│   ├── service.py                   ← Orchestration layer
-│   └── main.py                      ← FastAPI endpoints + validation
+│   ├── service.py         ← Fraud service layer (orchestration)
+│   └── main.py            ← FastAPI endpoints + input validation
 │
 ├── utils/
-│   ├── __init__.py
-│   └── explanation.py               ← Human-readable explanations
+│   └── explanation.py     ← Human-readable explanations
 │
-├── mpc/
-│   ├── prepare_mpc_data.py          ← Export UPI data for MP-SPDZ
-│   ├── Player-Data/                 ← MP-SPDZ reads input from here
-│   └── Programs/Source/
-│       └── upi_fraud_logistic.mpc   ← MP-SPDZ MPC program (SGDLogistic)
-│
-└── artifacts/                       ← Auto-created after training
+└── artifacts/             ← Auto-created after training
     ├── lr_model.joblib
     ├── scaler.joblib
     ├── label_encoders.joblib
     └── threshold.joblib
 ```
 
----
+## How to Run
 
-## Step-by-Step Run Guide
-
-### Part A — Standard LR API
-
+### Step 1 — Install dependencies
 ```bash
-# 1. Install dependencies
 pip install -r requirements.txt
-
-# 2. Train model (run ONCE — saves artifacts)
-cd AI_MODEL
-python model/train.py
-
-# 3. Start FastAPI server
-python api/main.py
-
-# 4. API is live at:
-#    http://localhost:8000/docs      ← Swagger UI
-#    POST http://localhost:8000/predict
-#    POST http://localhost:8000/batch
-#    GET  http://localhost:8000/health
 ```
 
-### Part B — MP-SPDZ MPC Integration
-
-Based exactly on:
-https://mp-spdz.readthedocs.io/en/latest/machine-learning.html
-
+### Step 2 — Train model (run ONCE)
 ```bash
-# 1. Install MP-SPDZ (Linux/macOS)
-wget https://github.com/data61/MP-SPDZ/releases/latest/download/mp-spdz-*.tar.xz
-tar xf mp-spdz-*.tar.xz
-cd mp-spdz-*/
+python model/train.py
+```
+This generates `artifacts/` folder with saved model, scaler, encoders, threshold.
 
-# 2. Prepare UPI data for MPC input
-cd /path/to/AI_MODEL
-python mpc/prepare_mpc_data.py
-# Creates: mpc/Player-Data/Input-P0-0
-# Creates: mpc/Player-Data/Input-Binary-P0-0
-
-# 3. Copy MPC program into MP-SPDZ
-cp mpc/Programs/Source/upi_fraud_logistic.mpc /path/to/mp-spdz/Programs/Source/
-
-# 4. Copy Player-Data into MP-SPDZ
-cp mpc/Player-Data/* /path/to/mp-spdz/Player-Data/
-
-# 5. Run MPC training (standard)
-cd /path/to/mp-spdz
-Scripts/compile-run.py -E ring upi_fraud_logistic
-
-# 6. Run with approximate sigmoid (faster)
-Scripts/compile-emulate.py upi_fraud_logistic approx
-
-# 7. Run with accuracy testing after each epoch
-Scripts/compile-emulate.py upi_fraud_logistic testing
+### Step 3 — Start FastAPI server
+```bash
+python api/main.py
+# or
+uvicorn api.main:app --host 0.0.0.0 --port 8000
 ```
 
----
+### Step 4 — Call the API
 
-## API Usage
-
-### Single Transaction — POST /predict
-
+**Single prediction:**
 ```bash
 curl -X POST http://localhost:8000/predict \
   -H "Content-Type: application/json" \
   -d '{
-    "amount": 99000,
+    "amount": 75000,
     "sender_upi_app": "GPay",
     "receiver_upi_app": "Paytm",
     "sender_bank": "SBI",
-    "receiver_bank": "Kotak",
+    "receiver_bank": "BOB",
     "merchant_category": "Transfer",
     "sender_state": "Delhi",
-    "receiver_state": "Maharashtra",
+    "receiver_state": "UP",
     "ip_country": "Foreign",
-    "sender_account_age_days": 3,
+    "sender_account_age_days": 5,
     "receiver_account_age_days": 2,
     "sender_txn_count_7d": 0,
     "receiver_txn_count_7d": 0,
-    "sender_avg_amount_30d": 200,
+    "sender_avg_amount_30d": 300,
     "is_new_device": 1,
     "is_new_beneficiary": 1,
-    "failed_attempts_24h": 8,
-    "device_change_30d": 5
+    "failed_attempts_24h": 7,
+    "device_change_30d": 3
   }'
 ```
 
-### Response
-
-```json
-{
-  "status": "success",
-  "result": {
-    "fraud_score": 100.0,
-    "risk_level": "CRITICAL",
-    "action": "BLOCK",
-    "emoji": "🚫",
-    "top_risk_factors": ["is_new_receiver_acc", "amount_vs_avg_ratio", ...],
-    "feature_risks": {
-      "Amount Risk": 100,
-      "Account Age Risk": 99,
-      "Device Risk": 100,
-      "Velocity Risk": 0,
-      "Geography Risk": 100,
-      "Attempt Risk": 100
-    },
-    "explanation": "Fraud score 100.0/100 — CRITICAL risk. Key signals: ...",
-    "timestamp": "2024-01-01 12:00:00"
-  }
-}
+**Health check:**
+```bash
+curl http://localhost:8000/health
 ```
 
----
+**API Docs (auto-generated):**
+```
+http://localhost:8000/docs
+```
 
 ## Architecture Flow
 
 ```
-Training (offline, run once):
-  data/generator.py
-       ↓
-  features/engineer.py
-       ↓
-  model/train.py  ──────────────────────→  artifacts/
-                  ──→ mpc/Player-Data/   (for MP-SPDZ)
+Training (offline):
+  generator.py → engineer.py → train.py → artifacts/
 
-Runtime (API, always running):
+Runtime (API):
   POST /predict
-       ↓
-  Input Validation (Pydantic — rejects missing fields)
-       ↓
-  api/service.py  (FraudService)
-       ↓
-  features/engineer.py  (FeatureEngineer)
-       ↓
-  model/predictor.py  (FraudPredictor → LR Model)
-       ↓
-  utils/explanation.py  (ExplanationEngine)
-       ↓
+      ↓
+  Input Validation (Pydantic)
+      ↓
+  FraudService (service.py)
+      ↓
+  FeatureEngineer (engineer.py)
+      ↓
+  FraudPredictor (predictor.py)
+      ↓
+  Logistic Regression Model
+      ↓
+  ExplanationEngine (explanation.py)
+      ↓
   JSON Response
-
-MPC (secure training with MP-SPDZ):
-  mpc/prepare_mpc_data.py
-       ↓
-  Player-Data/Input-P0-0
-       ↓
-  upi_fraud_logistic.mpc
-       ↓
-  ml.SGDLogistic(20, 2, program)  ← exactly per MP-SPDZ docs
-       ↓
-  log.fit(X_train, y_train)
-       ↓
-  log.predict_proba(X_test).reveal()
 ```
-
----
-
-## MP-SPDZ Integration Notes
-
-The MPC program uses exactly the API from the official docs:
-
-| Docs | This project |
-|---|---|
-| `ml.SGDLogistic(20, 2, program)` | ✅ Used as-is |
-| `log.fit(X_train, y_train)` | ✅ Used as-is |
-| `log.fit_with_testing(...)` | ✅ With `testing` arg |
-| `log.predict(X_test)` | ✅ Used as-is |
-| `log.predict_proba(X_test)` | ✅ Used as-is |
-| `sfix.input_tensor_via(0, X)` | ✅ Used as-is |
-| `sint.input_tensor_via(0, y)` | ✅ Used as-is |
-| `var.write_to_file()` | ✅ Model saved |
 
 ## Input Validation
 
-All 18 fields are required. Missing any field returns HTTP 422:
+All 18 fields are required. Missing fields return HTTP 422 with a descriptive error.
+No silent default injection.
 
-```json
-{
-  "detail": [
-    {
-      "loc": ["body", "receiver_bank"],
-      "msg": "field required",
-      "type": "missing"
-    }
-  ]
-}
-```
+| Field | Type | Allowed Values |
+|---|---|---|
+| amount | float > 0 | Any positive number |
+| sender_upi_app | string | GPay, PhonePe, Paytm, BHIM, Amazon Pay, WhatsApp Pay |
+| receiver_upi_app | string | same |
+| sender_bank | string | SBI, HDFC, ICICI, Axis, Kotak, PNB, Canara, BOB |
+| receiver_bank | string | same |
+| merchant_category | string | Grocery, Food, Travel, Shopping, Bill, Transfer, Entertainment, Medical |
+| sender_state | string | Maharashtra, Delhi, Karnataka, Tamil Nadu, West Bengal, Telangana, Gujarat, Rajasthan, UP, MP |
+| receiver_state | string | same |
+| ip_country | string | India, Foreign |
+| sender_account_age_days | float ≥ 0 | days |
+| receiver_account_age_days | float ≥ 0 | days |
+| sender_txn_count_7d | float ≥ 0 | count |
+| receiver_txn_count_7d | float ≥ 0 | count |
+| sender_avg_amount_30d | float ≥ 0 | ₹ |
+| is_new_device | 0 or 1 | 0=No, 1=Yes |
+| is_new_beneficiary | 0 or 1 | 0=No, 1=Yes |
+| failed_attempts_24h | float ≥ 0 | count |
+| device_change_30d | float ≥ 0 | count |
