@@ -1,0 +1,38 @@
+{
+  "_comment": "merchant name -> category. Categories MUST be one of mpc_integration/model_constants.py:ENCODER_CLASSES['merchant_category'] (Bill, Entertainment, Food, Grocery, Medical, Shopping, Transfer, Travel) or they'll silently encode as -1 (unseen category) under MPC. Person-to-person / unrecognized transfers intentionally fall through to the '_default' below rather than being guessed into a category.",
+  "_default": "Transfer",
+
+  "Amazon": "Shopping",
+  "Flipkart": "Shopping",
+  "Myntra": "Shopping",
+  "Ajio": "Shopping",
+
+  "Swiggy": "Food",
+  "Zomato": "Food",
+  "Dominos": "Food",
+
+  "BigBasket": "Grocery",
+  "Blinkit": "Grocery",
+  "Zepto": "Grocery",
+  "DMart": "Grocery",
+
+  "Uber": "Travel",
+  "Ola": "Travel",
+  "IRCTC": "Travel",
+  "MakeMyTrip": "Travel",
+  "RedBus": "Travel",
+
+  "Netflix": "Entertainment",
+  "BookMyShow": "Entertainment",
+  "Spotify": "Entertainment",
+  "Hotstar": "Entertainment",
+
+  "Apollo Pharmacy": "Medical",
+  "PharmEasy": "Medical",
+  "Practo": "Medical",
+
+  "Electricity Board": "Bill",
+  "Airtel": "Bill",
+  "Jio": "Bill",
+  "LIC": "Bill"
+}
