@@ -19,11 +19,26 @@ everyone else is simply absent (participants/npci/main.py's .get(...,
 Run from the project root:
     python scripts/generate_mock_data.py
 """
+import hashlib
 import json
 import os
 import random
 
 random.seed(42)
+
+
+def _stable_seed(text: str) -> int:
+    """Deterministic replacement for hash(text) % (2**31).
+
+    Python's built-in hash() is randomized per-process for strings (PEP 456,
+    on by default since 3.3) unless PYTHONHASHSEED is fixed in the
+    environment. Using it to seed random.seed() silently breaks the "same
+    account IDs are always suspicious" determinism this script promises —
+    two runs in two different processes produce two different suspicious
+    sets. hashlib is stable across processes and Python versions, so use
+    that instead.
+    """
+    return int(hashlib.sha256(text.encode()).hexdigest(), 16) % (2**31)
 
 RETAIL_BANKS = ["SBI", "HDFC"]
 ACCOUNTS_PER_BANK = 100
@@ -85,7 +100,7 @@ def generate_retail_bank(bank: str, ring_candidate_indices: list, ring_devices: 
     # reset seed per bank draw of suspicious_indices so each bank has its
     # own distribution, but reuse ring_devices/ring_candidate_indices so
     # the ring accounts line up at the same indices across banks
-    random.seed(hash(bank) % (2**31))
+    random.seed(_stable_seed(bank))
     remaining_pool = [i for i in range(1, ACCOUNTS_PER_BANK + 1) if i not in ring_candidate_indices]
     extra_suspicious = random.sample(remaining_pool, SUSPICIOUS_COUNT - CROSS_BANK_RING_COUNT)
     # ring indices are always suspicious and always included in the count
