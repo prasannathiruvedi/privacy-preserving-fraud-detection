@@ -24,16 +24,7 @@ PARTICIPANT_URLS = {name.value: f"http://localhost:{port}" for name, port in PAR
 GATEWAY_URL = f"http://localhost:{GATEWAY_PORT}"
 SESSIONS: Dict[str, SessionRecord] = {}
 
-
 def _build_mpc_inputs(gateway_features: dict, participant_features: Dict[str, dict]) -> dict:
-    """
-    Reshapes what /prepare (participant role + features) and /features
-    (gateway) returned into the {sender, receiver, npci, gateway} shape
-    mpc_integration.main.compute_risk() expects. SBI/HDFC swap which of
-    "sender"/"receiver" they fill depending on the transaction — that's
-    exactly why each participant reports its own role instead of the
-    orchestrator guessing it from the institution name.
-    """
     by_role = {}
     for institution, payload in participant_features.items():
         role = payload.get("role")
@@ -50,7 +41,6 @@ def _build_mpc_inputs(gateway_features: dict, participant_features: Dict[str, di
         "npci": by_role["npci"],
         "gateway": gateway_features,
     }
-
 
 @app.post("/evaluate", response_model=EvaluateResponse)
 async def evaluate(req: EvaluateRequest):
@@ -75,9 +65,6 @@ async def evaluate(req: EvaluateRequest):
             raise HTTPException(status_code=502, detail=f"{name} failed to prepare for {req.txn_id}")
         session.participant_features[name] = resp.json()["features"]
 
-    # Gateway already computed its 15 owned features (and the raw amount)
-    # when it first received the payment — pulled here the same way the
-    # participants' features were pulled above.
     async with httpx.AsyncClient(timeout=10) as client:
         gw_resp = await client.get(f"{GATEWAY_URL}/features", params={"txn_id": req.txn_id})
     if gw_resp.status_code != 200:
@@ -97,10 +84,6 @@ async def evaluate(req: EvaluateRequest):
         log("ORCHESTRATOR", f"Module 4 (MPC) not available yet — falling back to risk=None ({e})")
         risk = None
     except Exception as e:
-        # Anything else (subprocess failure, malformed MP-SPDZ output, a
-        # participant not reporting the role we expected) is a real bug,
-        # not "not implemented yet" — log it distinctly, but still fail
-        # safe to REVIEW rather than crash the whole request.
         log("ORCHESTRATOR", f"Module 4 (MPC) computation failed: {e!r} — falling back to risk=None")
         risk = None
 
@@ -117,7 +100,6 @@ async def evaluate(req: EvaluateRequest):
         decision=session.decision.value,
     )
 
-
 @app.get("/session/{session_id}", response_model=SessionRecord)
 def get_session(session_id: str):
     session = SESSIONS.get(session_id)
@@ -125,11 +107,9 @@ def get_session(session_id: str):
         raise HTTPException(status_code=404, detail="Session not found")
     return session
 
-
 @app.get("/sessions")
 def list_sessions():
     return list(SESSIONS.values())
-
 
 if __name__ == "__main__":
     import uvicorn

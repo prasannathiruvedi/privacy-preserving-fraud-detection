@@ -15,44 +15,17 @@ from shared.models import (
 )
 from shared.utils import log
 
-# Business-rule constants also used by AI/fixed/config.py — kept in sync by
-# hand for now since the two repos aren't a shared package yet.
 NEW_ACCOUNT_DAYS = 30
 HIGH_VELOCITY_TXN = 50
 
 ComputeFn = Callable[[Dict[str, Any]], Dict[str, Any]]
 
-
 def _deterministic_upi_app(account_id: str) -> str:
-    """
-    mock_data.json has no upi_app field (it wasn't part of the Module 2
-    schema). Placeholder: pick a deterministic app per account from a
-    hash of the account id, so the same account always reports the same
-    app across runs. Swap for a real field once mock_data.json — or a
-    real bank's records — actually carries it.
-    """
-    apps = ENCODER_CLASSES["sender_upi_app"]  # same class list for sender/receiver
+    apps = ENCODER_CLASSES["sender_upi_app"]
     idx = int(hashlib.sha256(account_id.encode()).hexdigest(), 16) % len(apps)
     return apps[idx]
 
-
 def make_bank_feature_fn(mock_by_account: Dict[str, Dict[str, Any]]) -> ComputeFn:
-    """
-    Real feature computation for a retail bank (SBI/HDFC) against its own
-    account records. A transaction has two account references but only
-    one belongs to this institution for a given role — the caller
-    (compute_local_features below) figures out sender vs receiver and
-    asks for the matching role's feature set.
-
-    "flagged_suspicious" and "device_match" below are NOT model inputs —
-    they're not in mpc_integration.model_constants.FEATURE_ORDER, so
-    _write_player_data() in mpc_integration/main.py never touches them.
-    They exist purely for human inspection via GET /session/<id>, so a
-    demo can show that SBI and HDFC each locally flagged an account AND
-    that both saw the same (ring) device, without either bank ever
-    seeing the other's raw account data — that cross-bank correlation
-    is the whole point of running this under MPC in the first place.
-    """
 
     def as_sender(account: str, other_account: str, txn_device_id: str) -> Dict[str, Any]:
         record = mock_by_account.get(account, {})
@@ -101,14 +74,7 @@ def make_bank_feature_fn(mock_by_account: Dict[str, Dict[str, Any]]) -> ComputeF
 
     return compute
 
-
 def make_npci_feature_fn(failed_attempts_by_account: Dict[str, int]) -> ComputeFn:
-    """
-    NPCI is the routing/switch node, not an account-holding bank — its
-    mock_data.json is shaped as {account_id: failed_attempts_24h}, since
-    the UPI switch is the one place that sees failed attempts across
-    every bank, not just one institution's own app.
-    """
 
     def compute(txn: Dict[str, Any]) -> Dict[str, Any]:
         sender_account = txn.get("from_account")
@@ -123,20 +89,11 @@ def make_npci_feature_fn(failed_attempts_by_account: Dict[str, int]) -> ComputeF
 
     return compute
 
-
 def create_participant_app(
     institution: str,
     mock_data_path: str,
     compute_fn: Optional[ComputeFn] = None,
 ) -> FastAPI:
-    """
-    Builds a participant-node FastAPI app for a single institution.
-    Retail banks (SBI/HDFC) share make_bank_feature_fn; NPCI passes its
-    own compute_fn (its mock data has a different shape entirely — see
-    make_npci_feature_fn). Everything else — the HTTP scaffolding, the
-    pending-transaction bookkeeping — is identical across institutions,
-    so it stays in this shared factory.
-    """
     app = FastAPI(title=f"{institution} Participant Node")
 
     pending_transactions: Dict[str, Dict[str, Any]] = {}

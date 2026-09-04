@@ -1,34 +1,3 @@
-"""
-Module 4 asset generator, step 1 of 2.
-
-Reads the artifacts produced by AI/model/train.py (lr_model.joblib,
-scaler.joblib, threshold.joblib, label_encoders.joblib) and writes
-mpc_integration/model_constants.py — the numeric contract that both
-mpc_integration/main.py (Python side) and fraud_score.mpc (MP-SPDZ side)
-are built from.
-
-Why "folded" weights:
-    StandardScaler computes z_i = (x_i - mean_i) / scale_i, then
-    LogisticRegression computes logit = intercept + sum(coef_i * z_i).
-    Substituting one into the other:
-
-        logit = [intercept - sum(coef_i * mean_i / scale_i)]     <- folded_bias
-                + sum( (coef_i / scale_i) * x_i )                <- folded_weight_i * raw x_i
-
-    So scaling and the linear layer collapse into ONE dot product over
-    the RAW feature values, computed with constants that are baked in at
-    MPC-compile time. No division-by-secret is needed just to standardize.
-
-Why compare on the logit instead of the sigmoid:
-    sigmoid is monotonic increasing, so
-        sigmoid(logit) >= threshold  <=>  logit >= ln(threshold / (1 - threshold))
-    The right-hand side is a plain constant computed once, offline, in
-    Python. Under MPC this turns a sigmoid + threshold check (exp, div)
-    into a single fixed-point comparison.
-
-Run from the project root:
-    python mpc_integration/generate_model_constants.py
-"""
 import json
 import os
 from pathlib import Path
@@ -44,9 +13,6 @@ AI_ARTIFACTS_DIR = Path(
 )
 OUT_PATH = Path(__file__).parent / "model_constants.py"
 
-# ---- feature ownership -----------------------------------------------
-# Every one of the model's 35 columns assigned to whichever node can
-# honestly compute it. See mpc_integration/README.md for the reasoning.
 FEATURE_OWNER = {
     "hour": "GATEWAY", "day_of_week": "GATEWAY", "is_weekend": "GATEWAY",
     "is_night": "GATEWAY", "log_amount": "GATEWAY", "is_large_txn": "GATEWAY",
@@ -70,7 +36,6 @@ FEATURE_OWNER = {
     "txn_velocity_ratio": "DERIVED", "cross_state": "DERIVED",
     "multi_risk_flag": "DERIVED",
 }
-
 
 def main():
     model = joblib.load(AI_ARTIFACTS_DIR / "lr_model.joblib")
@@ -96,8 +61,6 @@ def main():
     folded_bias = float(intercept - np.sum(coef * mean / scale))
     logit_threshold = float(np.log(threshold / (1 - threshold)))
 
-    # sanity check: folded dot product must reproduce sklearn's decisions
-    # exactly, over random points drawn in the model's actual input range.
     rng = np.random.default_rng(0)
     z = rng.normal(size=(500, len(cols)))
     x = z * scale + mean
@@ -136,7 +99,6 @@ def main():
     OUT_PATH.write_text("\n".join(lines))
     print(f"wrote {OUT_PATH}  ({len(cols)} features, threshold={threshold:.4f}, "
           f"logit_threshold={logit_threshold:.4f})")
-
 
 if __name__ == "__main__":
     main()
